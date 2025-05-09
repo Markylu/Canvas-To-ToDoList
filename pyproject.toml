@@ -1,0 +1,18 @@
+[project]
+name = "canvtotodo"
+version = "0.1.0"
+description = "Canvas to TodoList"
+authors = [
+    {name = "Markylu",email = "46211683+Markylu@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "canvasapi (>=3.3.0,<4.0.0)",
+    "todoist-api-python (>=3.1.0,<4.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
