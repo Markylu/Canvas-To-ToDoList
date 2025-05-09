@@ -44,14 +44,41 @@ On first run, you'll need to provide:
 
 ## Usage
 
-1. Run the application
-2. If this is your first time, enter your API keys in the setup window
-3. The application will automatically:
-   - Fetch your Canvas courses and assignments
-   - Create necessary labels in Todoist
-   - Add new assignments as tasks
-   - Remove assignment labels from completed tasks
-4. A status window will show the progress of the sync
+1. **First Run Setup**:
+   - Run the application
+   - Enter your Canvas API URL (e.g., https://sps.instructure.com/)
+   - Enter your Canvas API Key
+   - Enter your Canvas User ID
+   - Enter your Todoist API Key
+   - Click "Save Configuration"
+
+2. **Regular Usage**:
+   - Run the application
+   - The sync process will start automatically
+   - Tasks will be created in Todoist with:
+     - Assignment name as the task title
+     - Assignment URL in the description
+     - Due date in your local timezone
+     - Course name as a label
+
+3. **Task Management**:
+   - Tasks are automatically labeled with their course names
+   - Completed tasks are tracked
+   - Duplicate tasks are prevented using a cache system
+   - Tasks with expired due dates are automatically removed from the cache
+
+4. **Cache Management**:
+   - The application maintains a cache of tasks to prevent duplicates
+   - Cache is automatically cleaned up for expired tasks
+   - You can manually clear the cache using:
+     - Press Ctrl+Option+Command+Shift+Delete (⌃⌥⌘⇧⌫)
+     - Or click the "Clear Cache" button
+   - Cache is stored in `task_cache.json` in the application directory
+
+5. **Troubleshooting**:
+   - If tasks are duplicated, try clearing the cache
+   - If the sync fails, check your API keys and internet connection
+   - The application will show detailed status messages during the sync process
 
 ## Contributing
 
